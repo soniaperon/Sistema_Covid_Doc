@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main (){
+
+	int a,b,c,result;
+
+
+	printf("Digite o primeiro numero:\n");
+	scanf("%d" ,&a);
+
+	printf("Digite o segundo numero:\n");
+	scanf("%d" ,&b);
+
+	printf("Digite o terceiro numero:\n");
+	scanf("%d" ,&c);
+
+   result =a + c + b;
+
+	printf("Soma dos numeros:%d\n",result);
+	scanf("%d", &result);
+  
+    return 0;
+}
