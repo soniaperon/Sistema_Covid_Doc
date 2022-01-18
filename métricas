@@ -1,0 +1,68 @@
+1.	Contagem de Pontos de Função Referente a Tela de Agendamento
+O Primeiro passo a seguir para contar os pontos de função é determinar o tipo de contagem e como ele será medido.
+Normalmente são usados três tipos de contagens:
+•	Contagem de projeto de desenvolvimento, que é utilizado na hora da instalação do app juntamente com o usuário para conversão de dados necessários para utilização;
+•	Contagem de projeto de melhoria(manutenção) este mede as modificações ou updates de apps que já se encontram em execução;
+•	Contagem de Aplicação, mede a funcionalidade fornecida ao usuário pela aplicação instalada e em produção.
+ 
+Após a identificação do escopo de contagem precisamos ter o entendimento do que está dentro da aplicação e o que está fora nesse momento entra a Fronteira da Aplicação que é a interface conceitual entre aplicação e usuários externos.
+No próximo passo teremos as contagens das funções de dados e das funções de transação.
+Funções de dados:
+•	Arquivos Lógicos Internos (ALIs);
+•	Arquivos de Interface Externa (AIEs);
+
+
+Funções de Transação:
+•	Entradas Externas (EE);
+•	Saídas Externas (SE);
+•	Consultas Externas (CE).
+
+2.	Tipo de contagem
+
+Para melhor verificação de nosso APP escolhemos a Contagem de Aplicação, que mede a funcionalidade fornecida ao usuário pela aplicação instalada e em produção.
+
+3.	Contagens de pontos de função da tela de agendamento
+Utilizaremos como forma de contagem de pontos de função a tela de agendamento:
+ 
+
+4.	Contagem de ALI
+Em primeiro lugar contaremos os dados mantidos por 1 ou mais processos denominado ALI um exemplo de ALI é o CPF, pois o mesmo pode ser utilizado tanto para verificação de agendamento quanto para busca do agendamento.
+Contribuição de ALI para CPF:
+Grau de Complexidade Funcional	Pontos de Função
+Baixo	
+Médio	
+Alto	X 2 PF
+
+Depois da verificação do ALI precisamos avaliar os pontos de função da AIES que é um grupo de dados logicamente relacionados ou informações de controle (mantido na fronteira de outra aplicação).
+5.	Contagem de AIES
+Em nosso aplicativo, as informações referentes ao usuário, vêm da base governamental esse grupo de dados como Nome, RG, CPF, Endereço, Cidade, Telefone e idade sejam recebidos de fora por isso teremos que realizar a contagem referente a AIES pois esse grupo está fora da fronteira e temos acesso através do CPF do cidadão.
+
+Grau de Complexidade Funcional	Pontos de Função
+Baixo	X 2 PF -Telefone e idade
+Médio	X 2 PF – Endereço e cidade
+Alto	X 1 PF - CPF
+Tabela 1. Identificação grupo de dado (Fronteira)
+
+6.	Contagem de Entradas Externas
+Faremos também a Contagem de Entradas Externas (EEs): Funcionalidades que mantêm os Arquivos Lógicos Internos (ALIs) ou alteram o comportamento da aplicação. Consideramos uma entrada externa a adição de CPF para agendamento pois o mesmo já existe na base de dados governamental e faz a primeira entrada em nosso aplicativo.
+
+
+
+Nº EEs Simples:	
+Nº EEs Média:	X 1 PF
+Nº EEs Complexa:	
+Tabela 2. Identificação das Entradas Externas da Aplicação
+7.	Consultas Externas
+No momento em que o usuário realizar o download do termo de assentimento teremos uma consulta externa da aplicação pois o mesmo realiza o preenchimento e retorna a informação, este dado não tem referencias com algoritmos então sua contagem é realizada através da identificação de tabelas externas da aplicação.
+
+Nº CEs Simples:	
+Nº CEs Média:	X 1 PF
+Nº CEs Complexa:	
+Tabela 4. Identificação das Consultas Externas da Aplicação
+
+8.	Relatório de Finalização
+O quinto passo para contagem de pontos de função seria realizar um relatório ao usuário entretanto a tela de agendamento não apresenta nenhum tipo de informação ao usuário através de relatório com totalização de dados, etiquetas de código de barras ou gráficos por este motivo não se faz necessário a contagem de saídas Externas(SEs).
+
+9.	Total de pontos de Função
+A estimativa referente aos PFS das tabelas 1,2,3,4,5 terão um total de 9pfs.
+
